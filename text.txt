@@ -1,0 +1,23 @@
+HTTP - Hyper Text Transfer Protocol is how requests are sent and information returned via servers on the World Wide Web. There needs to be some standards to create uniformity
+
+URL - Uniform Resource Locator - unique domain name, protocol used, query string to assign values to specified parameters. The default port used is port 80 and this does not need to be included in the URL unless a different port other than 80 is being used.
+
+DNS - Domain Name Server - is used to find the IP address of a server from a given domain name and vice versa
+
+query string - optional - used to get more specific information than just the url, you can add it to the end of the resource you can change the parameters in the query string to access deffierent data, you could do a reddit search for chickens, or puppies, or indie music by adding a query string to a resource. 
+
+Two different HTTP verbs are GET and POST. GET is used to request information from a website. No data of the site's server is affected. However a POST request will in some way cause a side effect and change the server's data. A user makes a request to see posts about chickens = GET. A user makes a new reddit post = POST
+
+An HTTP request is a request from a computer to access information from a server on the World Wide Web. It follows certain protocols so that the server on the other end can understand it. The request has a Headers object which contains some metadata about the request in addition the actual request. An HTTP request can end up triggering other multiple http requests as images need to be loaded from third party sites and links or stylesheets also need to be requested
+
+An HTTP response is sent by a server back to the client that requested it. If the server is able to send back to the client, the information or data that the client requested, it sends the data back and returns a status code of 200 meaning everything ok and went as expected. Other status codes mean different things. a 404 is a common status code when the server is unable to find the page or data requested by the client
+
+An HTTP Header is a request or response object that is sent that gives more information about the request or response. Application is a header where you can specify what form you would like to receive the data in the response. The value application/json in the Application request header tells the server that you want to receive the data back in json format. The content-type key in the reponse header will have the value of the format type of the data sent back to the client
+
+When we we type “http://somesite.com/some/page.html” into a browser we will make an HTTP request (the http part represents the protocol that will be used). somesite.com is the host name of the server we want to make the request to. Port 80 will be used unless specified otherwise for HTTP requests. Then the resource part of the request /some/page.html is the more specific content within the site that we are accessing. it will let the server know what specifically to respond with
+
+curl https://icanhazdadjoke.com/
+
+dig https://icanhazdadjoke.com/ 172.21.176.1
+
+http://localhost:8000/
